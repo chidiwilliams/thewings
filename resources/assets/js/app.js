@@ -15,8 +15,15 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+const Nominate = require('./components/Nominate.vue');
+const Nominations = require('./components/Nominations.vue');
+const Edit = require('./components/Edit.vue');
 
 const app = new Vue({
-    el: '#app'
+  el: '#app',
+  components: {
+    Nominate,
+    Nominations,
+    Edit,
+  },
 });
