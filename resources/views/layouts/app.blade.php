@@ -19,7 +19,7 @@
                 <section class="navigation">
                 <div class="container">
                     <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
                         <div class="form-header">
                         <div class="profile">
                             <a href="{{ route('home') }}">
@@ -58,7 +58,7 @@
                 <section class="footer">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
                                 <div class="footer-sub">
                                     <div class="footer-text">Regal Set, Class of 2018 <br> Covenant University, Ota</div>
 
@@ -66,7 +66,6 @@
                                         <div class="footer-links-terms">
                                             <a href="{{ route('terms') }}">Terms and conditions</a>
                                         </div>
-
                                         <div class="footer-links-follow">Follow us on <a href="https://twitter.com/The13thSet" target="_blank">Twitter</a> and <a href="https://www.instagram.com/the13thset/" target="_blank">Instagram</a></div>
                                     </div>
                                 </div>
