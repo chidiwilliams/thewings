@@ -8,6 +8,6 @@ class TermsController extends Controller
 {
     public function terms()
     {
-        return "terms";
+        return view('terms');
     }
 }

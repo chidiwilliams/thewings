@@ -10650,6 +10650,22 @@ section.footer div.footer-sub div.footer-links-follow a {
   color: #dab800;
 }
 
+div.list-section {
+  margin-bottom: 30px;
+}
+
+div.list-header {
+  font-size: 18px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
