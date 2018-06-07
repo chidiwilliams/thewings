@@ -5,7 +5,7 @@
 <section class="nomination-form">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
                 <div class="page-heading">
                     <div class="page-heading-main">Nominate</div>
                     <div class="page-heading-instructions">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
                 @if(Auth::user()->nominations->count() === App\User::MAX_NOMINATIONS)
                     <alert-card v-bind:message="'You have completed your nominations. Thank you for nominating.'" v-bind:classType="'success'"></alert-card>
                 @else

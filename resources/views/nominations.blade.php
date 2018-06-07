@@ -5,7 +5,7 @@
     <section class="nominations">
         <div class="container">
             <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
                 <div class="page-heading">
                 <div class="page-heading-main">Edit nominations</div>
                 </div>
