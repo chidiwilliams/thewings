@@ -10,7 +10,7 @@
 
         <title>The Wings Awards</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Open+Sans|Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @yield('css')
     </head>
