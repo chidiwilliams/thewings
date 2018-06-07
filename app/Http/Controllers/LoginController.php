@@ -22,4 +22,10 @@ class LoginController extends Controller
         }
         return redirect()->to('/login');
     }
+
+    public function logout()
+    {
+        auth()->logout();
+        return redirect()->to('/');
+    }
 }

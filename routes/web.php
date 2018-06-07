@@ -13,6 +13,7 @@
 
 Route::get('/', 'LoginController@home')->name('home');
 Route::get('login', 'LoginController@login');
+Route::get('auth/logout', 'LoginController@logout')->name('logout');
 
 Route::get('terms', 'TermsController@terms')->name('terms');
 
