@@ -29,3 +29,8 @@ Route::get('nominations/{slug}/edit', 'NominationController@edit');
 Route::post('nominations/{slug}', 'NominationController@update');
 
 Route::post('nominations/delete/{slug}', 'NominationController@destroy')->name('delete');
+
+Route::group(['middleware' => ['isAdmin']], function () {
+    Route::get('admin/users', 'ExportController@users');
+    Route::get('admin/nominations', 'ExportController@nominations');
+});
