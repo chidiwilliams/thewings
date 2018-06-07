@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LoginController@home')->name('home');
+Route::get('login', 'LoginController@login');
+
+Route::get('auth/google/redirect', 'AuthGoogleController@redirect')->name('google');
+Route::get('auth/google/callback', 'AuthGoogleController@callback');
