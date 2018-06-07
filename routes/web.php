@@ -18,3 +18,13 @@ Route::get('terms', 'TermsController@terms')->name('terms');
 
 Route::get('auth/google/redirect', 'AuthGoogleController@redirect')->name('google');
 Route::get('auth/google/callback', 'AuthGoogleController@callback');
+
+Route::get('nominate', 'NominationController@create')->name('nominate');
+Route::get('nominations', 'NominationController@index')->name('nominations');
+Route::get('nominations/{slug}', 'NominationController@show');
+
+Route::post('nominations', 'NominationController@store');
+Route::get('nominations/{slug}/edit', 'NominationController@edit');
+Route::post('nominations/{slug}', 'NominationController@update');
+
+Route::post('nominations/delete/{slug}', 'NominationController@destroy')->name('delete');
