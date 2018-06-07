@@ -10,6 +10,7 @@
 
         <title>The Wings Awards</title>
 
+        <link rel="shortcut icon" href="{{ asset('img/wings_triangle_H80_icon.ico') }}" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @yield('css')
