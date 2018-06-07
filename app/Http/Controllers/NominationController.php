@@ -41,7 +41,6 @@ class NominationController extends Controller
      */
     public function create()
     {
-        auth()->login(User::find(1));
         return view('nominate');
     }
 
