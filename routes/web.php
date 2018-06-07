@@ -14,5 +14,7 @@
 Route::get('/', 'LoginController@home')->name('home');
 Route::get('login', 'LoginController@login');
 
+Route::get('terms', 'TermsController@terms')->name('terms');
+
 Route::get('auth/google/redirect', 'AuthGoogleController@redirect')->name('google');
 Route::get('auth/google/callback', 'AuthGoogleController@callback');
