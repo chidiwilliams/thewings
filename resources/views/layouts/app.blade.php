@@ -25,11 +25,13 @@
                     <a href="#" id="menu-trigger" class="hamburger-trigger"><img src="{{ asset('img/icons8-menu.svg') }}" alt="Hamburger"></a>
                     <div class="menu" id="menu">
                         <ul class="nav-ul">
-                            <li><a href="{{ route('nominate') }}">Nominate</a></li>
-                            <li><a href="{{ route('nominations') }}">Edit Nominations</a></li>
-                            <li><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards" target="_blank" class="golden-link" onclick="window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards', 'name', 'width=550,height=420')">Tweet at us!</a></li>
-                            {{-- <li><a href="{{ route('terms') }}">Terms</a></li> --}}
-                            <li><a href="{{ route('logout') }}">Logout</a></li>
+                            @auth
+                                <li><a href="{{ route('nominate') }}">Nominate</a></li>
+                                <li><a href="{{ route('nominations') }}">Edit Nominations</a></li>
+                                <li><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards" target="_blank" class="golden-link" onclick="window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards', 'name', 'width=550,height=420')">Tweet at us!</a></li>
+                                {{-- <li><a href="{{ route('terms') }}">Terms</a></li> --}}
+                                <li><a href="{{ route('logout') }}">Logout</a></li>
+                            @endauth
                         </ul>
                     </div>
                 </div>
