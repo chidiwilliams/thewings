@@ -34,7 +34,3 @@ Route::group(['middleware' => ['isAdmin']], function () {
     Route::get('admin/users', 'ExportController@users');
     Route::get('admin/nominations', 'ExportController@nominations');
 });
-
-// Route::get('admin_login', function() {
-//     auth()->login(\App\User::find(1));
-// });
