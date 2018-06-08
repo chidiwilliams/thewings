@@ -1,9 +1,9 @@
 <template>
   <section class="nomination-form">
     <form :action="submit_link" method="POST">
-        <input name="_token" :value="getCSRF()" type="hidden" class="csrf">
+    <input name="_token" :value="getCSRF()" type="hidden" class="csrf">
       <div class="card">
-        <div class="card-header">About your nominee</div>
+        <div class="cards-header">About your nominee</div>
 
         <div class="form-group">
           <label for="nominee-first-name" class="control-label">First name <span class="required-star">*</span></label>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="card">
-          <div class="card-header">Your words matter</div>
+          <div class="cards-header">Your words matter</div>
           <div class="form-group">
             <label for="nominee-work" class="control-label">Tell us about your nominee and what is special about his/her work <span class="required-star">*</span></label>
             <textarea name="nominee-work" rows="3" class="form-control" v-model="nomination.nominee_work" required></textarea>

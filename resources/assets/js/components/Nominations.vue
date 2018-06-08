@@ -68,7 +68,7 @@ export default {
 }
 
 .nomination-group {
-  margin: 20px auto;
+  margin: 20px 0;
 }
 
 .nomination-status {

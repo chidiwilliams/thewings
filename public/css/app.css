@@ -10417,10 +10417,10 @@ body,
   font-family: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
   height: 100%;
   margin: 0;
+  background-color: #000;
   padding: 0;
   line-height: 1.6;
-  background-color: #262626;
-  color: #f4f4f4;
+  color: #eeeeee;
 }
 
 section.navigation {
@@ -10428,19 +10428,16 @@ section.navigation {
 }
 
 .card {
-  background-color: #333;
-  border: 1px solid #222;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  background-color: #0a0a0a;
+  border: 1px solid #111111;
   border-radius: 3px;
   padding: 20px;
   margin-bottom: 25px;
 }
 
-.card .card-header {
+.card .cards-header {
   font-size: 1.3em;
-  font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .alert-card {
@@ -10561,6 +10558,12 @@ input.form-control {
   border-radius: 4px;
 }
 
+input.form-control:focus,
+textarea.form-control:focus {
+  background: #262626;
+  color: #fff;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -10576,6 +10579,7 @@ textarea.form-control:focus,
 }
 
 .action-btn {
+  cursor: pointer;
   width: 150px;
   text-align: center;
   display: block;
@@ -10601,25 +10605,23 @@ textarea.form-control:focus,
 }
 
 div.page-heading {
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 25px;
 }
 
-div.page-heading div.page-heading-main {
-  font-size: 1.5em;
+div.page-heading .page-heading-head {
+  font-size: 22px;
   font-weight: 600;
+  margin-bottom: 5px;
 }
 
-.page-heading-instructions {
-  text-align: left;
-  margin-top: 15px;
+.page-heading ol.links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
-.page-heading-instructions .page-heading-instructions-head {
-  margin-bottom: 10px;
-}
-
-.page-heading-instructions ol li {
+.page-heading ol.links li {
   margin-bottom: 10px;
 }
 
@@ -10664,6 +10666,202 @@ div.list-header {
 
 li {
   margin-bottom: 10px;
+}
+
+div.nav {
+  background: #000;
+  width: 100%;
+  z-index: 10;
+  padding: 30px 0;
+}
+
+@media (min-width: 768px) {
+  div.nav {
+    position: fixed;
+  }
+}
+
+div.nav-pic {
+  float: left;
+}
+
+div.menu {
+  position: absolute;
+  top: 100px;
+  background: #000;
+  width: calc(100% - 30px);
+  border-bottom: 2px solid #dab800;
+  display: none;
+  z-index: 11;
+}
+
+@media (min-width: 768px) {
+  div.menu {
+    display: block;
+    float: left;
+    width: auto;
+    margin-top: 120px;
+    margin-top: 0;
+    position: relative;
+    border-bottom: none;
+    top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  div.body {
+    padding-top: 130px;
+  }
+}
+
+ul.nav-ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 768px) {
+  ul.nav-ul {
+    margin-left: 40px;
+  }
+}
+
+ul.nav-ul li {
+  margin: 30px 0;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+@media (min-width: 768px) {
+  ul.nav-ul li {
+    margin: 39px 15px 0 15px;
+    display: inline-block;
+  }
+}
+
+ul.nav-ul li a {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #999c;
+  text-decoration: none;
+  color: #999c;
+}
+
+ul.nav-ul li a:hover {
+  border-bottom-color: #dab800;
+  color: #dab800;
+}
+
+div.pictures {
+  display: none;
+  float: left;
+  margin-right: 30px;
+  position: fixed;
+}
+
+@media (min-width: 768px) {
+  div.pictures {
+    display: block;
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  div.pictures {
+    width: 400px;
+  }
+}
+
+div.pictures img.bg {
+  margin-top: 35px;
+  max-width: 100%;
+  max-height: 500px;
+  margin: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  div.con {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    float: left;
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  div.con {
+    margin-left: 450px;
+    width: calc(100% - 450px);
+  }
+}
+
+a.hamburger-trigger {
+  float: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+a.hamburger-trigger img {
+  width: 35px;
+}
+
+@media (min-width: 768px) {
+  a.hamburger-trigger {
+    display: none;
+  }
+}
+
+.sign-in-label {
+  text-align: center;
+}
+
+.google-link {
+  display: block;
+  margin-left: -2px;
+  max-width: 225px;
+}
+
+.google-image {
+  width: 100%;
+}
+
+.sign-in-req {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  color: #999;
+}
+
+div.wings {
+  margin-top: 20px;
+  max-width: 520px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #dab800;
+  font-size: 55px;
+}
+
+@media (min-width: 768px) {
+  div.wings {
+    font-size: 65px;
+  }
+}
+
+@media (min-width: 992px) {
+  div.wings {
+    font-size: 90px;
+  }
+}
+
+div.brought {
+  font-weight: lighter;
+  font-size: 25px;
+  color: #bbb;
+  font-style: italic;
 }
 
 .navbar-laravel {

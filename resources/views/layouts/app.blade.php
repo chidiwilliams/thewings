@@ -11,75 +11,68 @@
         <title>The Wings Awards</title>
 
         <link rel="shortcut icon" href="{{ asset('img/wings_triangle_0PE_icon.ico') }}" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600|Open+Sans:300,400,500,600|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @yield('css')
     </head>
     <body>
         <div id="app">
-            <div id="app">
-                <section class="navigation">
+            <div class="nav">
                 <div class="container">
-                    <div class="row">
-                    <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
-                        <div class="form-header">
-                        <div class="profile">
-                            <a href="{{ route('home') }}">
-                                <img class="profile-pic" src="{{ asset('img/wings.png') }}" width="300">
-                            </a>
-                            <div class="profile-desc">We celebrate spectacular individuals – Covenant University Eagles, graduating students and staff – doing extraordinary work.</div>
-                        </div>
-
-                        <div class="navigation-box">
-                            @auth
-                            <div>
-                                <div class="welcome-text">Welcome, <b>{{ Auth::user()->name }}</b> ({{ Auth::user()->email }})</div>
-
-                                <div class="navigation-links links">
-                                    <a href="{{ route('nominate') }}">Nominate</a>
-                                    <a href="{{ route('nominations') }}">Edit Nominations</a>
-                                    <a
-                                    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards"
-                                    target="_blank" class="golden-link"
-                                    onclick="window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards', 'name', 'width=550,height=420')">Tweet at us!</a>
-                                    <a href="{{ route('logout') }}">Logout</a>
-                                </div>
-                            </div>
-                            @endauth
-                        </div>
-                        </div>
+                    <div class="nav-pic">
+                        <a href="{{ route('home') }}"><img src="{{ asset('img/wings.png') }}" alt="Wings" width="120"></a>
                     </div>
+                    <a href="#" id="menu-trigger" class="hamburger-trigger"><img src="{{ asset('img/icons8-menu.svg') }}" alt="Hamburger"></a>
+                    <div class="menu" id="menu">
+                        <ul class="nav-ul">
+                            <li><a href="{{ route('nominate') }}">Nominate</a></li>
+                            <li><a href="{{ route('nominations') }}">Edit Nominations</a></li>
+                            <li><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards" target="_blank" class="golden-link" onclick="window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards', 'name', 'width=550,height=420')">Tweet at us!</a></li>
+                            {{-- <li><a href="{{ route('terms') }}">Terms</a></li> --}}
+                            <li><a href="{{ route('logout') }}">Logout</a></li>
+                        </ul>
                     </div>
                 </div>
-                </section>
 
-                <section class="content">
-                    @yield('content')
-                </section>
+            </div>
 
-                <section class="footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
-                                <div class="footer-sub">
-                                    <div class="footer-text">Regal Set, Class of 2018 <br> Covenant University, Ota</div>
-
-                                    <div class="footer-links links">
-                                        <div class="footer-links-terms">
-                                            <a href="{{ route('terms') }}">Terms and conditions</a>
-                                        </div>
-                                        <div class="footer-links-follow">Follow us on <a href="https://twitter.com/The13thSet" target="_blank">Twitter</a> and <a href="https://www.instagram.com/the13thset/" target="_blank">Instagram</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="body">
+                <div class="container">
+                    <div class="pictures">
+                            <img class="bg bg-1" src="{{ asset('img/Suit.png') }}" alt="Suit">
                     </div>
-                </section>
+                    <div class="con">
+                        @yield('content')
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
         </div>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
         @yield('js')
+        <script>
+            $(document).ready(function() {
+                setInterval(function() {
+                    if(Math.random() >= 0.5) {
+                        $(".bg").fadeOut(1000, function() {
+                            if($(this).attr("src") === "{{ asset('img/Gown.png') }}") {
+                                $(this).attr("src", "{{ asset('img/Suit.png') }}");
+                            } else {
+                                $(this).attr("src", "{{ asset('img/Gown.png') }}");
+                            }
+                            $(this).on('load', function() {
+                                $(this).fadeIn(1000);
+                            });
+                        });
+                    }
+                }, 7000);
+
+                $('#menu-trigger').click(function() {
+                    $('#menu').slideToggle(500);
+                })
+            })
+        </script>
     </body>
 </html>

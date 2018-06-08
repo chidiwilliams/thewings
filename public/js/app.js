@@ -47912,7 +47912,7 @@ var render = function() {
       }),
       _vm._v(" "),
       _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
+        _c("div", { staticClass: "cards-header" }, [
           _vm._v("About your nominee")
         ]),
         _vm._v(" "),
@@ -48046,7 +48046,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
+        _c("div", { staticClass: "cards-header" }, [
           _vm._v("Your words matter")
         ]),
         _vm._v(" "),
@@ -48404,7 +48404,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n.nomination-header {\n  margin-bottom: 5px;\n  height: 25px;\n}\n.nomination-nominee {\n  font-weight: bold;\n  font-size: 16px;\n}\n.nomination-links {\n  text-align: left;\n  line-height: 25px;\n}\n.nomination-links a {\n    margin-right: 10px;\n}\n@media (min-width: 768px) {\n.nomination-links {\n    text-align: right;\n}\n.nomination-links a {\n      margin: 0 10px;\n}\n}\n.nomination-group {\n  margin: 20px auto;\n}\n.nomination-status {\n  text-transform: capitalize;\n}\n.nomination-question {\n  font-weight: 600;\n  margin-bottom: 5px;\n}\n.nomination-arrow {\n  color: #ffd700;\n  line-height: 20px;\n  margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.nomination-header {\n  margin-bottom: 5px;\n  height: 25px;\n}\n.nomination-nominee {\n  font-weight: bold;\n  font-size: 16px;\n}\n.nomination-links {\n  text-align: left;\n  line-height: 25px;\n}\n.nomination-links a {\n    margin-right: 10px;\n}\n@media (min-width: 768px) {\n.nomination-links {\n    text-align: right;\n}\n.nomination-links a {\n      margin: 0 10px;\n}\n}\n.nomination-group {\n  margin: 20px 0;\n}\n.nomination-status {\n  text-transform: capitalize;\n}\n.nomination-question {\n  font-weight: 600;\n  margin-bottom: 5px;\n}\n.nomination-arrow {\n  color: #ffd700;\n  line-height: 20px;\n  margin-right: 10px;\n}\n", ""]);
 
 // exports
 

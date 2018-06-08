@@ -1,230 +1,233 @@
 $box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 $gold-color: #dab800;
+$ash-color: #999c;
 
 html,
 body,
 #app {
-  font-family: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #262626;
-  color: #f4f4f4;
+    font-family: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+    padding: 0;
+    line-height: 1.6;
+    color: #eeeeee;
 }
 
 section.navigation {
-  padding: 50px 0 10px 0;
+    padding: 50px 0 10px 0;
 }
 
 .card {
-  background-color: #333;
-  border: 1px solid #222;
-  box-shadow: $box-shadow;
-  border-radius: 3px;
-  padding: 20px;
-  margin-bottom: 25px;
+    background-color: #0a0a0a;
+    border: 1px solid #111111;
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 25px;
 
-  .card-header {
-    font-size: 1.3em;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
+    .cards-header {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
 }
 
 .alert-card {
-  background: #333;
-  border: 1px solid #ffd700;
+    background: #333;
+    border: 1px solid #ffd700;
 
-  &.plain {
-    border: 1px solid #222;
-  }
+    &.plain {
+        border: 1px solid #222;
+    }
 
-  &.error {
-    border: 1px solid #f00;
-  }
+    &.error {
+        border: 1px solid #f00;
+    }
 
-  &.success {
-    border: 1px solid #0f0;
-  }
+    &.success {
+        border: 1px solid #0f0;
+    }
 }
 
 div.form-header {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .profile {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .profile-pic {
-    width: 200px;
-    margin-bottom: 15px;
-  }
+    .profile-pic {
+        width: 200px;
+        margin-bottom: 15px;
+    }
 
-  .profile-name {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 5px;
-    font-weight: 600;
-  }
+    .profile-name {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
 
-  .profile-desc {
-    color: #999;
-    text-align: center;
-  }
+    .profile-desc {
+        color: #999;
+        text-align: center;
+    }
 }
 
 .navigation-box {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 
-  .navigation-links {
-    padding: 5px 0 10px 0;
-    border-bottom: 1px solid #999c;
-  }
+    .navigation-links {
+        padding: 5px 0 10px 0;
+        border-bottom: 1px solid $ash-color;
+    }
 
-  .welcome-text {
-    margin-bottom: 3px;
-  }
+    .welcome-text {
+        margin-bottom: 3px;
+    }
 }
 
 .required-star,
 .gold {
-  color: $gold-color;
+    color: $gold-color;
 }
 
 .links a {
-  color: #999;
+    color: #999;
 }
 
 .navigation-links a {
-  margin: 0 10px;
+    margin: 0 10px;
 }
 
 .status {
-  height: 50px;
-  line-height: 50px;
-  cursor: pointer;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px inset rgba(0, 0, 0, 0.6);
-  opacity: 0.6;
-  width: 100%;
-  border-radius: 25px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px inset rgba(0, 0, 0, 0.6);
+    opacity: 0.6;
+    width: 100%;
+    border-radius: 25px;
 
-  &.selected,
-  &:hover {
-    box-shadow: $box-shadow;
-    opacity: 1;
-  }
+    &.selected,
+    &:hover {
+        box-shadow: $box-shadow;
+        opacity: 1;
+    }
 }
 
 input.form-control,
 .status,
 textarea.form-control {
-  background: #262626;
-  border: 1px solid #222;
-  color: #fff;
-  transition: 0.5s;
+    background: #262626;
+    border: 1px solid #222;
+    color: #fff;
+    transition: 0.5s;
 }
 
 label {
-  font-weight: normal;
-  margin-bottom: 10px;
+    font-weight: normal;
+    margin-bottom: 10px;
 }
 
 input.form-control {
-  height: 50px;
-  border-radius: 4px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+input.form-control:focus, textarea.form-control:focus {
+    background: #262626;
+    color: #fff;
 }
 
 .form-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 input.form-control:focus,
 .status:focus,
 textarea.form-control:focus,
 .action-btn:focus {
-  outline: 0;
-  border-color: $gold-color;
-  box-shadow: none;
+    outline: 0;
+    border-color: $gold-color;
+    box-shadow: none;
 }
 
 .action-btn {
-  width: 150px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  box-shadow: $box-shadow;
-  border: none;
-  border-radius: 25px;
-  transition: 0.5s;
-  height: 50px;
-  line-height: 50px;
-  text-transform: uppercase;
-  font-weight: 900;
-  background: $gold-color;
-  color: #222;
-
-  &:hover,
-  &:focus {
-    color: initial;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    display: block;
     text-decoration: none;
-  }
+    box-shadow: $box-shadow;
+    border: none;
+    border-radius: 25px;
+    transition: 0.5s;
+    height: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: $gold-color;
+    color: #222;
+
+    &:hover,
+    &:focus {
+        color: initial;
+        text-decoration: none;
+    }
 }
 
 div.page-heading {
-  margin-bottom: 20px;
-  text-align: center;
+    margin-bottom: 25px;
 
-  div.page-heading-main {
-    font-size: 1.5em;
-    font-weight: 600;
-  }
+    .page-heading-head {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
 }
 
-.page-heading-instructions {
-  text-align: left;
-  margin-top: 15px;
+.page-heading {
+    ol.links {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8px;
+        margin-bottom: 0;
 
-  .page-heading-instructions-head {
-    margin-bottom: 10px;
-  }
-
-  ol {
-    li {
-      margin-bottom: 10px;
+        li {
+            margin-bottom: 10px;
+        }
     }
-  }
 }
 
 a.golden-link {
-  color: $gold-color;
+    color: $gold-color;
 }
 
 section.footer {
-  margin-top: 30px;
-  div.footer-sub {
-    padding: 25px 0;
-    border-top: 1px solid #999c;
-    text-align: center;
+    margin-top: 30px;
+    div.footer-sub {
+        padding: 25px 0;
+        border-top: 1px solid $ash-color;
+        text-align: center;
 
-    div.footer-text {
-      color: #eee;
-      margin-bottom: 15px;
-    }
+        div.footer-text {
+            color: #eee;
+            margin-bottom: 15px;
+        }
 
-    div.footer-links-terms {
-      margin-bottom: 10px;
-    }
+        div.footer-links-terms {
+            margin-bottom: 10px;
+        }
 
-    div.footer-links-follow a {
-      color: $gold-color;
+        div.footer-links-follow a {
+            color: $gold-color;
+        }
     }
-  }
 }
 
 div.list-section {
@@ -241,4 +244,180 @@ div.list-header {
 
 li {
     margin-bottom: 10px;
+}
+
+div.nav {
+    background: #000;
+    width: 100%;
+    z-index: 10;
+    padding: 30px 0;
+
+    @media (min-width: 768px) {
+        position: fixed;
+    }
+}
+
+div.nav-pic {
+    float: left;
+}
+
+div.menu {
+    position: absolute;
+    top: 100px;
+    background: #000;
+    width: calc(100% - 30px);
+    border-bottom: 2px solid $gold-color;
+    display: none;
+    z-index: 11;
+
+    @media (min-width: 768px) {
+        display: block;
+        float: left;
+        width: auto;
+        margin-top: 120px;
+        margin-top: 0;
+        position: relative;
+        border-bottom: none;
+        top: 0;
+    }
+}
+
+div.body {
+    @media (min-width: 768px) {
+        padding-top: 130px;
+    }
+}
+
+ul.nav-ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @media (min-width: 768px) {
+        margin-left: 40px;
+    }
+
+    li {
+        margin: 30px 0;
+        text-transform: uppercase;
+        font-weight: lighter;
+
+        @media (min-width: 768px) {
+            margin: 39px 15px 0 15px;
+            display: inline-block;
+        }
+
+        a {
+            padding-bottom: 5px;
+            border-bottom: 2px solid $ash-color;
+            text-decoration: none;
+            color: $ash-color;
+
+            &:hover {
+                border-bottom-color: $gold-color;
+                color: $gold-color;
+            }
+        }
+    }
+}
+
+div.pictures {
+    display: none;
+    float: left;
+    margin-right: 30px;
+    position: fixed;
+
+    @media (min-width: 768px) {
+        display: block;
+        width: 300px;
+    }
+
+    @media (min-width: 992px) {
+        width: 400px;
+    }
+
+    img.bg {
+        margin-top: 35px;
+        max-width: 100%;
+        max-height: 500px;
+        margin: auto;
+        display: block;
+    }
+}
+
+div.con {
+    @media (min-width: 768px) {
+        margin-left: 300px;
+        width: calc(100% - 300px);
+        float: left;
+        display: block;
+    }
+
+    @media (min-width: 992px) {
+        margin-left: 450px;
+        width: calc(100% - 450px);
+    }
+}
+
+a.hamburger-trigger {
+    float: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 10px;
+
+    img {
+        width: 35px;
+    }
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.sign-in-label {
+    text-align: center;
+}
+
+.google-link {
+    display: block;
+    margin-left: -2px;
+    max-width: 225px;
+}
+
+.google-image {
+    width: 100%;
+}
+
+.sign-in-req {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: #999;
+}
+
+div.wings {
+    margin-top: 20px;
+    max-width: 520px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #dab800;
+    font-size: 55px;
+
+    @media (min-width: 768px) {
+        font-size: 65px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 90px;
+    }
+}
+
+div.brought {
+    font-weight: lighter;
+    font-size: 25px;
+    color: #bbb;
+    font-style: italic;
 }

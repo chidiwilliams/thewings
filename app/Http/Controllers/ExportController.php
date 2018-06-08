@@ -11,8 +11,8 @@ class ExportController extends Controller
     public function users()
     {
         return User::all();
-    }
 
+    }
     public function nominations()
     {
         return Nomination::all();
