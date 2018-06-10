@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use Cookie;
 
 class LoginController extends Controller
 {
@@ -12,6 +13,8 @@ class LoginController extends Controller
         if(Auth::check()) {
             return redirect()->to('/');
         }
+        $request->session()->flush();
+        Cookie::queue(Cookie::forget('laravel_session'));
         return view('login');
     }
 
