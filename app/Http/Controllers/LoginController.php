@@ -13,8 +13,6 @@ class LoginController extends Controller
         if(Auth::check()) {
             return redirect()->to('/');
         }
-        $request->session()->flush();
-        Cookie::queue(Cookie::forget('laravel_session'));
         return view('login');
     }
 
