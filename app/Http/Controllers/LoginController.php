@@ -8,9 +8,17 @@ use Cookie;
 
 class LoginController extends Controller
 {
+    public function clearCookies(Request $request)
+    {
+        $request->session()->flush();
+        Cookie::queue(Cookie::forget('laravel_session'));
+
+        return redirect()->to('/auth/login');
+    }
+
     public function login(Request $request)
     {
-        if(Auth::check()) {
+        if (Auth::check()) {
             return redirect()->to('/');
         }
         return view('login');
@@ -21,8 +29,6 @@ class LoginController extends Controller
         if (Auth::check()) {
             return redirect()->to('/nominate');
         }
-        $request->session()->flush();
-        Cookie::queue(Cookie::forget('laravel_session'));
         return redirect()->to('/login');
     }
 

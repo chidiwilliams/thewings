@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'LoginController@home')->name('home');
-Route::get('login', 'LoginController@login')->name('login');
+Route::get('login', 'LoginController@clearCookies')->name('login');
+Route::get('auth/login',          'LoginController@login');
 Route::get('auth/logout', 'LoginController@logout')->name('logout');
 
 Route::get('terms', 'TermsController@terms')->name('terms');
