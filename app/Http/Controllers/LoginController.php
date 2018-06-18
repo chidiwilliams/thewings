@@ -18,12 +18,19 @@ class LoginController extends Controller
         Session::flush();
         Session::forget('laravel_session');
         Cookie::queue(Cookie::forget('laravel_session'));
-
         return redirect()->to('/auth/login');
     }
 
     public function login(Request $request)
     {
+        $request->session()->flush();
+        if($request->session()->has('laravel_session')) {
+            $request->session()->forget('laravel_session');
+        }
+        Session::flush();
+        Session::forget('laravel_session');
+        Cookie::queue(Cookie::forget('laravel_session'));
+
         if (Auth::check()) {
             return redirect()->to('/');
         }
