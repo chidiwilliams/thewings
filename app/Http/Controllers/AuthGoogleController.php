@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Socialite;
 use App\Services\GoogleAccountService;
 use JWTAuth;
@@ -10,7 +11,7 @@ use Session;
 
 class AuthGoogleController extends Controller
 {
-    public function redirect()
+    public function redirect(Request $request)
     {
         $request->session()->flush();
         if($request->session()->has('laravel_session')) {
