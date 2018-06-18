@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 use Socialite;
 use App\Services\GoogleAccountService;
 use JWTAuth;
-use Cookie;
-use Session;
 
 class AuthGoogleController extends Controller
 {
