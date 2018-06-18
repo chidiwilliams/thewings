@@ -13,14 +13,6 @@ class AuthGoogleController extends Controller
 {
     public function redirect(Request $request)
     {
-        $request->session()->flush();
-        if($request->session()->has('laravel_session')) {
-            $request->session()->forget('laravel_session');
-        }
-        Session::flush();
-        Session::forget('laravel_session');
-        Cookie::queue(Cookie::forget('laravel_session'));
-
         return Socialite::driver('google')->redirect();
     }
 
