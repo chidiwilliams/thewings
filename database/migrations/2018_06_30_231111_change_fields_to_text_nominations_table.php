@@ -14,12 +14,12 @@ class ChangeFieldsToTextNominationsTable extends Migration
     public function up()
     {
         Schema::table('nominations', function (Blueprint $table) {
-            $table->string('nominee_first_name', 4000)->change();
-            $table->string('nominee_last_name', 4000)->change();
-            $table->string('nominee_status', 4000)->change();
-            $table->string('nominee_work', 4000)->change();
-            $table->string('nominee_impact', 4000)->nullable()->change();
-            $table->string('nominee_links', 4000)->nullable()->change();
+            $table->text('nominee_first_name')->change();
+            $table->text('nominee_last_name')->change();
+            $table->text('nominee_status')->change();
+            $table->text('nominee_work')->change();
+            $table->text('nominee_impact')->nullable()->change();
+            $table->text('nominee_links')->nullable()->change();
         });
     }
 
