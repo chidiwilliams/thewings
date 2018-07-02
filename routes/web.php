@@ -12,23 +12,24 @@
 */
 
 Route::get('/', 'LoginController@home')->name('home');
-Route::get('login', 'LoginController@login')->name('login');
-Route::get('auth/logout', 'LoginController@logout')->name('logout');
+Route::get('/done', 'DoneController@done')->name('done');
+// Route::get('login', 'LoginController@login')->name('login');
+// Route::get('auth/logout', 'LoginController@logout')->name('logout');
 
 Route::get('terms', 'TermsController@terms')->name('terms');
 
-Route::get('auth/google/redirect', 'AuthGoogleController@redirect')->name('google');
-Route::get('auth/google/callback', 'AuthGoogleController@callback');
+// Route::get('auth/google/redirect', 'AuthGoogleController@redirect')->name('google');
+// Route::get('auth/google/callback', 'AuthGoogleController@callback');
 
-Route::get('nominate', 'NominationController@create')->name('nominate');
-Route::get('nominations', 'NominationController@index')->name('nominations');
-Route::get('nominations/{slug}', 'NominationController@show');
+// Route::get('nominate', 'NominationController@create')->name('nominate');
+// Route::get('nominations', 'NominationController@index')->name('nominations');
+// Route::get('nominations/{slug}', 'NominationController@show');
 
-Route::post('nominations', 'NominationController@store');
-Route::get('nominations/{slug}/edit', 'NominationController@edit');
-Route::post('nominations/{slug}', 'NominationController@update');
+// Route::post('nominations', 'NominationController@store');
+// Route::get('nominations/{slug}/edit', 'NominationController@edit');
+// Route::post('nominations/{slug}', 'NominationController@update');
 
-Route::post('nominations/delete/{slug}', 'NominationController@destroy')->name('delete');
+// Route::post('nominations/delete/{slug}', 'NominationController@destroy')->name('delete');
 
 Route::group(['middleware' => ['isAdmin']], function () {
     Route::get('admin/users', 'ExportController@users');

@@ -17,10 +17,11 @@ class LoginController extends Controller
 
     public function home(Request $request)
     {
-        if (Auth::check()) {
-            return redirect()->to('/nominate');
-        }
-        return redirect()->to('/login');
+        // if (Auth::check()) {
+        //     return redirect()->to('/nominate');
+        // }
+        // return redirect()->to('/login');
+        return redirect()->to('/done');
     }
 
     public function logout()
