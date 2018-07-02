@@ -10843,20 +10843,20 @@ section.done div.big {
   text-transform: uppercase;
   font-weight: bolder;
   color: #dab800;
-  font-size: 55px;
+  font-size: 40px;
 }
 
 @media (min-width: 768px) {
   div.wings,
   section.done div.big {
-    font-size: 65px;
+    font-size: 55px;
   }
 }
 
 @media (min-width: 992px) {
   div.wings,
   section.done div.big {
-    font-size: 90px;
+    font-size: 65px;
   }
 }
 
@@ -10870,6 +10870,11 @@ section.done div.small {
 
 section.done div.cta {
   margin-top: 40px;
+}
+
+section.ceremony img {
+  max-width: 100%;
+  margin-bottom: 30px;
 }
 
 .navbar-laravel {

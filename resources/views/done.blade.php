@@ -2,21 +2,21 @@
 
 @section('css')
 <style>
-    div.big {
+    /* div.big {
         margin-top: 20px;
         max-width: 520px;
         line-height: 1;
         text-transform: uppercase;
         font-weight: bolder;
         color: #dab800;
-        font-size: 55px;
+        font-size: 30px;
 
         @media (min-width: 768px) {
-            font-size: 65px;
+            font-size: 60px;
         }
 
         @media (min-width: 992px) {
-            font-size: 90px;
+            font-size: 70px;
         }
     }
 
@@ -29,7 +29,7 @@
 
     div.cta {
         margin-top: 40px;
-    }
+    } */
 </style>
 @endsection
 
