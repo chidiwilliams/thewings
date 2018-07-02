@@ -397,7 +397,7 @@ a.hamburger-trigger {
     color: #999;
 }
 
-div.wings {
+div.wings, section.done div.big {
     margin-top: 20px;
     max-width: 520px;
     line-height: 1;
@@ -415,7 +415,7 @@ div.wings {
     }
 }
 
-div.brought {
+div.brought, section.done div.small {
     font-weight: lighter;
     font-size: 25px;
     color: #bbb;

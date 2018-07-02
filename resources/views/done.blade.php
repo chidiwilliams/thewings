@@ -6,8 +6,7 @@
         <div class="small">Thank you for nominating for The Wings Award</div>
 
         <div class="cta">
-            <div class="cta-text">Learn more about The Wings Ceremony 2018</div>
-            <div class="cta-link">Show me</div>
+            <div class="cta-text"><a href="/ceremony" class="gold golden-link">Learn more</a> about The Wings Ceremony 2018</div>
         </div>
     </section>
 @endsection
