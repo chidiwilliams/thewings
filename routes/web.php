@@ -13,7 +13,7 @@
 
 Route::get('/', 'LoginController@home')->name('home');
 Route::get('/done', 'DoneController@done')->name('done');
-Route::get('/ceremony', 'DoneController@ceremony')->name('ceremony');
+Route::get('/wings', 'DoneController@ceremony')->name('ceremony');
 // Route::get('login', 'LoginController@login')->name('login');
 // Route::get('auth/logout', 'LoginController@logout')->name('logout');
 
