@@ -10874,7 +10874,17 @@ section.done div.cta {
 
 section.ceremony img {
   max-width: 100%;
-  margin-bottom: 30px;
+}
+
+a.tweet {
+  display: block;
+  margin: 10px 0 30px 0;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #dab800 !important;
 }
 
 .navbar-laravel {

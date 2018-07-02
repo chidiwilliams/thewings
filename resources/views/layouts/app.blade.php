@@ -5,6 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="" />
+        <meta name="twitter:title" content="The Wings Ceremony" />
+        <meta name="twitter:description" content="The Wings Ceremony holds on Saturday 21 July, 2018. Alumni and members of the 2018 graduating class are all invited." />
+        <meta name="twitter:image" content="{{ asset('img/Wings Banner.png') }}" />
+        <meta name="twitter:url" content="http://thewings.xyz/ceremony" />
+
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 

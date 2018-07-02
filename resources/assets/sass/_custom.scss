@@ -139,7 +139,8 @@ input.form-control {
     border-radius: 4px;
 }
 
-input.form-control:focus, textarea.form-control:focus {
+input.form-control:focus,
+textarea.form-control:focus {
     background: #262626;
     color: #fff;
 }
@@ -397,7 +398,8 @@ a.hamburger-trigger {
     color: #999;
 }
 
-div.wings, section.done div.big {
+div.wings,
+section.done div.big {
     margin-top: 20px;
     max-width: 520px;
     line-height: 1;
@@ -415,7 +417,8 @@ div.wings, section.done div.big {
     }
 }
 
-div.brought, section.done div.small {
+div.brought,
+section.done div.small {
     font-weight: lighter;
     font-size: 25px;
     color: #bbb;
@@ -428,5 +431,15 @@ section.done div.cta {
 
 section.ceremony img {
     max-width: 100%;
-    margin-bottom: 30px;
+}
+
+a.tweet {
+    display: block;
+    margin: 10px 0 30px 0;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $gold-color !important;
 }
