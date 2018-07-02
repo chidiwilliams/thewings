@@ -10835,7 +10835,8 @@ a.hamburger-trigger img {
   color: #999;
 }
 
-div.wings {
+div.wings,
+section.done div.big {
   margin-top: 20px;
   max-width: 520px;
   line-height: 1;
@@ -10846,22 +10847,29 @@ div.wings {
 }
 
 @media (min-width: 768px) {
-  div.wings {
+  div.wings,
+  section.done div.big {
     font-size: 65px;
   }
 }
 
 @media (min-width: 992px) {
-  div.wings {
+  div.wings,
+  section.done div.big {
     font-size: 90px;
   }
 }
 
-div.brought {
+div.brought,
+section.done div.small {
   font-weight: lighter;
   font-size: 25px;
   color: #bbb;
   font-style: italic;
+}
+
+section.done div.cta {
+  margin-top: 40px;
 }
 
 .navbar-laravel {
