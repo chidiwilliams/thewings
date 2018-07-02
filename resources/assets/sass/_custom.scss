@@ -1,6 +1,6 @@
 $box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 $gold-color: #dab800;
-$ash-color: #999c;
+$ash-color: #999999cc;
 
 html,
 body,
@@ -431,15 +431,5 @@ section.done div.cta {
 
 section.ceremony img {
     max-width: 100%;
-}
-
-a.tweet {
-    display: block;
-    margin: 10px 0 30px 0;
-    padding: 10px 0;
-    text-align: center;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $gold-color !important;
+    margin-bottom: 40px;
 }

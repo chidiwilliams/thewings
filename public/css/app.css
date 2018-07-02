@@ -10499,7 +10499,7 @@ div.form-header {
 
 .navigation-box .navigation-links {
   padding: 5px 0 10px 0;
-  border-bottom: 1px solid #999c;
+  border-bottom: 1px solid #999999cc;
 }
 
 .navigation-box .welcome-text {
@@ -10635,7 +10635,7 @@ section.footer {
 
 section.footer div.footer-sub {
   padding: 25px 0;
-  border-top: 1px solid #999c;
+  border-top: 1px solid #999999cc;
   text-align: center;
 }
 
@@ -10741,9 +10741,9 @@ ul.nav-ul li {
 
 ul.nav-ul li a {
   padding-bottom: 5px;
-  border-bottom: 2px solid #999c;
+  border-bottom: 2px solid #999999cc;
   text-decoration: none;
-  color: #999c;
+  color: #999999cc;
 }
 
 ul.nav-ul li a:hover {
@@ -10874,17 +10874,7 @@ section.done div.cta {
 
 section.ceremony img {
   max-width: 100%;
-}
-
-a.tweet {
-  display: block;
-  margin: 10px 0 30px 0;
-  padding: 10px 0;
-  text-align: center;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #dab800 !important;
+  margin-bottom: 40px;
 }
 
 .navbar-laravel {
