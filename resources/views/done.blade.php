@@ -39,7 +39,7 @@
         <div class="small">Thank you for participating</div>
 
         <div class="cta">
-            <div class="cta-text" style="font-size: 20px;"><a href="{{ route('welcome') }}" class="gold golden-link">Learn more</a> about The Wings Ceremony 2018</div>
+            <div class="cta-text" style="font-size: 20px;"><a href="{{ route('ceremony') }}" class="gold golden-link">Learn more</a> about The Wings Ceremony 2018</div>
         </div>
     </section>
 @endsection
