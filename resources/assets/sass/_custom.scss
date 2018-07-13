@@ -1,5 +1,5 @@
 $box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-$gold-color: #dab800;
+$gold-color: #dbb800;
 $ash-color: #999999cc;
 
 html,
@@ -92,7 +92,7 @@ div.form-header {
 
 .required-star,
 .gold {
-    color: $gold-color;
+    color: $gold-color !important;
 }
 
 .links a {
@@ -432,4 +432,73 @@ section.done div.cta {
 section.ceremony img {
     max-width: 100%;
     margin-bottom: 50px;
+}
+
+section.attend {
+    div#capture {
+        max-width: 600px;
+        margin: auto;
+    }
+    div.page-header {
+        margin-bottom: 20px;
+    }
+
+    div.invitation {
+        border: 10px solid #ffffff;
+        width: 600px;
+        height: 300px;
+        margin: auto;
+        position: relative;
+        text-align: right;
+        margin-bottom: 30px;
+
+        div.invitation-header {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 32px;
+            font-style: italic;
+            padding: 15px 25px 5px 25px;
+        }
+
+        div.invitation-dets {
+            margin-right: 25px;
+
+            div.dets-group {
+                margin-bottom: 3px;
+
+                .label {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+
+                .det {
+                    margin-top: -10px;
+                    font-size: 25px;
+                    font-weight: lighter;
+                }
+            }
+        }
+
+        div.iv-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 15px;
+
+            img.wings {
+                height: 50px;
+                margin-right: 10px;
+                float: left;
+            }
+
+            div.soar {
+                font-style: italic;
+                font-size: 20px;
+                float: left;
+                font-weight: lighter;
+                margin-top: calc(50px - 28px);
+            }
+        }
+    }
 }

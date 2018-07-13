@@ -10508,7 +10508,7 @@ div.form-header {
 
 .required-star,
 .gold {
-  color: #dab800;
+  color: #dbb800 !important;
 }
 
 .links a {
@@ -10573,7 +10573,7 @@ input.form-control:focus,
 textarea.form-control:focus,
 .action-btn:focus {
   outline: 0;
-  border-color: #dab800;
+  border-color: #dbb800;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -10594,7 +10594,7 @@ textarea.form-control:focus,
   line-height: 50px;
   text-transform: uppercase;
   font-weight: 900;
-  background: #dab800;
+  background: #dbb800;
   color: #222;
 }
 
@@ -10626,7 +10626,7 @@ div.page-heading .page-heading-head {
 }
 
 a.golden-link {
-  color: #dab800;
+  color: #dbb800;
 }
 
 section.footer {
@@ -10649,7 +10649,7 @@ section.footer div.footer-sub div.footer-links-terms {
 }
 
 section.footer div.footer-sub div.footer-links-follow a {
-  color: #dab800;
+  color: #dbb800;
 }
 
 div.list-section {
@@ -10690,7 +10690,7 @@ div.menu {
   top: 100px;
   background: #000;
   width: calc(100% - 30px);
-  border-bottom: 2px solid #dab800;
+  border-bottom: 2px solid #dbb800;
   display: none;
   z-index: 11;
 }
@@ -10747,8 +10747,8 @@ ul.nav-ul li a {
 }
 
 ul.nav-ul li a:hover {
-  border-bottom-color: #dab800;
-  color: #dab800;
+  border-bottom-color: #dbb800;
+  color: #dbb800;
 }
 
 div.pictures {
@@ -10875,6 +10875,74 @@ section.done div.cta {
 section.ceremony img {
   max-width: 100%;
   margin-bottom: 50px;
+}
+
+section.attend div#capture {
+  max-width: 600px;
+  margin: auto;
+}
+
+section.attend div.page-header {
+  margin-bottom: 20px;
+}
+
+section.attend div.invitation {
+  border: 10px solid #ffffff;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+section.attend div.invitation div.invitation-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-style: italic;
+  padding: 15px 25px 5px 25px;
+}
+
+section.attend div.invitation div.invitation-dets {
+  margin-right: 25px;
+}
+
+section.attend div.invitation div.invitation-dets div.dets-group {
+  margin-bottom: 3px;
+}
+
+section.attend div.invitation div.invitation-dets div.dets-group .label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+section.attend div.invitation div.invitation-dets div.dets-group .det {
+  margin-top: -10px;
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+section.attend div.invitation div.iv-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 15px;
+}
+
+section.attend div.invitation div.iv-footer img.wings {
+  height: 50px;
+  margin-right: 10px;
+  float: left;
+}
+
+section.attend div.invitation div.iv-footer div.soar {
+  font-style: italic;
+  font-size: 20px;
+  float: left;
+  font-weight: lighter;
+  margin-top: calc(50px - 28px);
 }
 
 .navbar-laravel {
