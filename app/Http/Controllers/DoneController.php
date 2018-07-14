@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Jenssegers\Optimus\Optimus;
 use Validator;
 use App\Invitation;
 
@@ -29,7 +30,7 @@ class DoneController extends Controller
                 'required',
                 Rule::in(['graduate', 'staff', 'alumnus', 'other'])
             ],
-            'email' => ['required', 'email']
+            'email' => ['required', 'email', 'unique:invitations']
         ]);
 
         $iv = new Invitation;
@@ -43,10 +44,8 @@ class DoneController extends Controller
         $iv->ivid = $optim->encode($iv->id);
         $iv->save();
 
-        $params = [
+        return view('iv', [
             "iv" => $iv
-        ];
-
-        return view('iv', $iv);
+        ]);
     }
 }

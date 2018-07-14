@@ -9,15 +9,15 @@
                 <div class="invitation-dets">
                     <div class="dets-group">
                         <div class="label">Full name</div>
-                        <div class="det name">Chidi Williams</div>
+                        <div class="det name">{{ ucwords($iv->first_name) }} {{ ucwords($iv->last_name) }}</div>
                     </div>
                     <div class="dets-group">
                         <div class="label">Type</div>
-                        <div class="det class">Graduate</div>
+                        <div class="det class">{{ ucwords($iv->type) }}</div>
                     </div>
                     <div class="dets-group">
                         <div class="label">ID</div>
-                        <div class="det id">ew3lb3wqfwq09</div>
+                        <div class="det id">{{ $iv->ivid }}</div>
                     </div>
                 </div>
                 <div class="iv-footer">
@@ -28,7 +28,7 @@
         </div>
         <div id="iv"></div>
         <div id="imgg"></div>
-        <div class="small page-footer">...we've also sent it to your mailbox.</div>
+        <div class="small page-footer">...you might want to save the image (but we'll also send it to your mailbox).</div>
     </section>
 @endsection
 

@@ -4,14 +4,22 @@
     <section class="done get-iv">
         <div class="page-header">I'll be attending...</div>
         @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
+            <div class="card alert-card error links">
+                <div>
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                        @if ($errors->first("email") == "The email has already been taken.")
+                            <div>
+                                We already sent an invitation to that email address.
+                                <a href="#resend" class="golden-link">Resend invitation</a>
+                            </div>
+                        @else
+                            <div>{{ $error }}</div>
+                        @endif
                     @endforeach
-                </ul>
+                </div>
             </div>
         @endif
+
         <form method="POST" action="{{ route('getIV') }}" class="get-iv-form">
             @csrf
             <div class="form-group">

@@ -8,7 +8,7 @@
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="" />
         <meta name="twitter:title" content="The Wings Ceremony" />
-        <meta name="twitter:description" content="The Wings Ceremony holds on Saturday 21 July, 2018. Alumni and members of the 2018 graduating class are all invited." />
+        <meta name="twitter:description" content="The Wings Ceremony holds on Saturday 21 July, 2018. Alumni and members of the 2018 graduating class are invited." />
         <meta name="twitter:image" content="{{ asset('img/Wings Banner.png') }}" />
         <meta name="twitter:url" content="{{ route('ceremony') }}" />
 
@@ -34,8 +34,8 @@
                             <ul class="nav-ul">
                                 {{-- <li><a href="{{ route('nominate') }}">Nominate</a></li> --}}
                                 <li><a href="{{ route('ceremony') }}">The Wings Ceremony</a></li>
+                                <li><a href="{{ route('attend') }}">Attend</a></li>
                                 <li><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards" target="_blank" class="golden-link" onclick="window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fthewings.xyz&via=the13thset&text=Honour%20your%20hero%21%20The%20Wings%20Award%20brought%20to%20you%20by%20the%20Regal%20Set%2C%20CU.&hashtags=The13thSet%2CRegalSet%2CTheWingsAwards', 'name', 'width=550,height=420')">Tweet at us!</a></li>
-                                {{-- <li><a href="{{ route('terms') }}">Terms</a></li> --}}
                                 {{-- <li><a href="{{ route('logout') }}">Logout</a></li> --}}
                             </ul>
                         </div>
