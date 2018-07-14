@@ -38,4 +38,5 @@ Route::get('terms', 'TermsController@terms')->name('terms');
 Route::group(['middleware' => ['isAdmin']], function () {
     Route::get('admin/users', 'ExportController@users');
     Route::get('admin/nominations', 'ExportController@nominations');
+    Route::get('admin/ivs', 'DoneController@ivs');
 });

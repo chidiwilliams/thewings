@@ -48,4 +48,8 @@ class DoneController extends Controller
             "iv" => $iv
         ]);
     }
+
+    public function ivs(Request $request) {
+        return Invitation::all();
+    }
 }
