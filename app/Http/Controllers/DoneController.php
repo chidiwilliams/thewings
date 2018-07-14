@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use Validator;
+use App\Invitation;
 
 class DoneController extends Controller
 {
@@ -15,9 +18,35 @@ class DoneController extends Controller
     }
 
     public function attend(Request $request) {
-        // Find logged in user
-        // Create new invitation
-        // Send iv to view
         return view('attend');
+    }
+
+    public function getIV(Request $request) {
+        $request->validate([
+            'first-name' => 'required',
+            'last-name' => 'required',
+            'type' => [
+                'required',
+                Rule::in(['graduate', 'staff', 'alumnus', 'other'])
+            ],
+            'email' => ['required', 'email']
+        ]);
+
+        $iv = new Invitation;
+        $iv->first_name = $request["first-name"];
+        $iv->last_name = $request["last-name"];
+        $iv->email = $request["email"];
+        $iv->type = $request["type"];
+        $iv->save();
+
+        $optim = new Optimus(1580030173, 59260789, 1163945558);
+        $iv->ivid = $optim->encode($iv->id);
+        $iv->save();
+
+        $params = [
+            "iv" => $iv
+        ];
+
+        return view('iv', $iv);
     }
 }

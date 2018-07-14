@@ -1,42 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="done attend">
-        <div class="small page-header">Here's your invitation...</div>
-        <div id="capture">
-            <div class="invitation" style="background-image: url('{{ asset('img/bg.png') }}'); background-size: cover; color: #fff;">
-                <div class="invitation-header">The Wings Award 2018</div>
-                <div class="invitation-dets">
-                    <div class="dets-group">
-                        <div class="label">Full name</div>
-                        <div class="det name">Chidi Williams</div>
-                    </div>
-                    <div class="dets-group">
-                        <div class="label">Type</div>
-                        <div class="det class">Graduate</div>
-                    </div>
-                    <div class="dets-group">
-                        <div class="label">ID</div>
-                        <div class="det id">ew3lb3wqfwq09</div>
-                    </div>
-                </div>
-                <div class="iv-footer">
-                    <img src="{{ asset('img/wings-white-no-text.png') }}"  class="wings">
-                    <div class="soar">We soar as eagles...</div>
-                </div>
+    <section class="done get-iv">
+        <div class="page-header">I'll be attending...</div>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
-        </div>
-        <div id="iv"></div>
-        <div class="small page-header">...we've also sent it to your mailbox.</div>
+        @endif
+        <form method="POST" action="{{ route('getIV') }}" class="get-iv-form">
+            @csrf
+            <div class="form-group">
+                <label for="first-name" class="control-label">My first name is <span class="required-star">*</span></label>
+                <input name="first-name" class="form-control" required >
+            </div>
+            <div class="form-group">
+                <label for="last-name" class="control-label">My last name is <span class="required-star">*</span></label>
+                <input name="last-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name" class="control-label">I am <span class="required-star">*</span></label>
+                <select name="type" class="form-control select-control">
+                    <option value="graduate">A graduate!</option>
+                    <option value="staff">A staff</option>
+                    <option value="alumnus">An alumnus</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email" class="control-label">Send my IV to this email address <span class="required-star">*</span></label>
+                <input name="email" type="text" class="form-control" required>
+            </div>
+            <br>
+            <input type="submit" value="Send my IV" class="action-btn">
+        </form>
     </section>
-@endsection
-
-@section('js')
-<script>
-    $(function() {
-        html2canvas(document.querySelector("#capture")).then(canvas => {
-            $("#iv").append(canvas)
-        });
-    })
-</script>
 @endsection

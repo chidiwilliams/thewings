@@ -10423,6 +10423,10 @@ body,
   color: #eeeeee;
 }
 
+section {
+  padding-bottom: 50px;
+}
+
 section.navigation {
   padding: 50px 0 10px 0;
 }
@@ -10539,6 +10543,7 @@ div.form-header {
 }
 
 input.form-control,
+select.form-control.select-control,
 .status,
 textarea.form-control {
   background: #262626;
@@ -10553,8 +10558,9 @@ label {
   margin-bottom: 10px;
 }
 
-input.form-control {
-  height: 50px;
+input.form-control,
+select.form-control.select-control {
+  height: 50px !important;
   border-radius: 4px;
 }
 
@@ -10569,6 +10575,7 @@ textarea.form-control:focus {
 }
 
 input.form-control:focus,
+select.form-control.select-control:focus,
 .status:focus,
 textarea.form-control:focus,
 .action-btn:focus {
@@ -10580,7 +10587,7 @@ textarea.form-control:focus,
 
 .action-btn {
   cursor: pointer;
-  width: 150px;
+  min-width: 150px;
   text-align: center;
   display: block;
   text-decoration: none;
@@ -10879,11 +10886,14 @@ section.ceremony img {
 
 section.attend div#capture {
   max-width: 600px;
-  margin: auto;
 }
 
 section.attend div.page-header {
   margin-bottom: 20px;
+}
+
+section.attend div.page-footer {
+  margin-top: 20px;
 }
 
 section.attend div.invitation {
@@ -10893,7 +10903,6 @@ section.attend div.invitation {
   margin: auto;
   position: relative;
   text-align: right;
-  margin-bottom: 30px;
 }
 
 section.attend div.invitation div.invitation-header {
@@ -10943,6 +10952,26 @@ section.attend div.invitation div.iv-footer div.soar {
   float: left;
   font-weight: lighter;
   margin-top: calc(50px - 28px);
+}
+
+section.get-iv div.page-header {
+  font-weight: lighter;
+  font-size: 30px;
+  font-style: italic;
+}
+
+section.get-iv div.page-header-sub {
+  color: #bbb;
+}
+
+section.get-iv div.alert {
+  max-width: 500px;
+  margin: 15px 0;
+}
+
+section.get-iv form.get-iv-form {
+  margin-top: 30px;
+  max-width: 500px;
 }
 
 .navbar-laravel {
