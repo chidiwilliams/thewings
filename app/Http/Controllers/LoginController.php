@@ -21,7 +21,7 @@ class LoginController extends Controller
         //     return redirect()->to('/nominate');
         // }
         // return redirect()->to('/login');
-        return redirect()->to('/done');
+        return redirect()->to('/attend');
     }
 
     public function logout()
