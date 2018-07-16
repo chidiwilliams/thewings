@@ -6,6 +6,7 @@
         <div id="capture">
             <div id="invitation" class="invitation" style="background-image: url('{{ asset('img/bg.png') }}'); background-size: cover; color: #fff;">
                 <div class="invitation-header">The Wings Award 2018</div>
+                <div class="invitation-header-sub">5pm • 21 July</div>
                 <div class="invitation-dets">
                     <div class="dets-group">
                         <div class="label">Full name</div>

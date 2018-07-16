@@ -28,7 +28,7 @@ class DoneController extends Controller
             'last-name' => 'required',
             'type' => [
                 'required',
-                Rule::in(['graduate', 'staff', 'alumnus', 'other'])
+                Rule::in(['graduate', 'staff', 'alumnus', 'other', 'nominee'])
             ],
             'email' => ['required', 'email', 'unique:invitations']
         ]);
@@ -44,6 +44,7 @@ class DoneController extends Controller
         $iv->ivid = $optim->encode($iv->id);
         $iv->save();
 
+        $iv->ivid = 12324;
         return view('iv', [
             "iv" => $iv
         ]);

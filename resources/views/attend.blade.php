@@ -36,6 +36,7 @@
                     <option value="graduate">A graduate!</option>
                     <option value="staff">A staff</option>
                     <option value="alumnus">An alumnus</option>
+                    <option value="nominee">A nominee</option>
                     <option value="other">Other</option>
                 </select>
             </div>
