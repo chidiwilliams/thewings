@@ -44,7 +44,6 @@ class DoneController extends Controller
         $iv->ivid = $optim->encode($iv->id);
         $iv->save();
 
-        $iv->ivid = 12324;
         return view('iv', [
             "iv" => $iv
         ]);
